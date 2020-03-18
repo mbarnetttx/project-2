@@ -1,0 +1,35 @@
+Idea:
+
+A website that hosts links to learning activities for parents teaching from home 
+
+possible "rainy day" page, that holds links for inside activities
+
+new technology : moderator function that sends new links to moderators email so they can be approved before posting 
+
+
+Applications:
+
+Javascript, Node, Sql, 
+
+
+
+Will be able to:  
+
+Add links (POST)
+
+Sort by category and/or school grade
+
+Displays the webpage and all links (GET)
+
+Search function?
+
+Request function??
+
+
+When you first open the page:
+
+Search by grade, then categories, and also there is a requests intake subfolder that holds Q and A from viewers
+
+
+
+
