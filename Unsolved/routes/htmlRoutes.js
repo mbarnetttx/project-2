@@ -5,7 +5,8 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("index", {
-        msg: "Welcome!",
+        title: "Indoor Learning",
+        msg: "A place to help homeschooling parents or summer time with kids!",
         examples: dbExamples
       });
     });
@@ -20,6 +21,13 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/science", function(req, res) {
+    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+      res.render("secience", {
+        example: dbExample
+      });
+    });
+  });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
