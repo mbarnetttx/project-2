@@ -22,8 +22,8 @@ module.exports = function(app) {
   });
 
   app.get("/science", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("secience", {
+    db.Example.findAll({}).then(function(dbExample) {
+      res.render("science", {
         example: dbExample
       });
     });
