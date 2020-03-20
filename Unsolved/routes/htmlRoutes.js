@@ -6,7 +6,7 @@ module.exports = function(app) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("index", {
         Toptitle: "Indoor Learning",
-        msg: "A place to help homeschooling parents or summer time with kids!",
+        msg: "A community to help homeschooling parents, summer time with kids, and each other!",
         examples: dbExamples
       });
     });

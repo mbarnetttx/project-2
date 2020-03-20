@@ -1,8 +1,63 @@
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">{{example.title}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">{{example.link}}</a>
+<div class="container">
+
+<div class="row"><!-- card for database info -->
+  <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+
+     {{#each examples}}
+          <h5 class="card-title">{{this.title}}</h5>
+          <a href="example/" class="card-link">{{this.link}}</a>
+      {{/each}}
+
+        </div>
+      </div>
+
   </div>
+</div><!-- end of card -->
+
+<br>
+<hr>
+
+  <!-- form -->
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h1>Add a SCIENCE link to contribute to our community!</h1>
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="example-text">Title</label>
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Title">
+          </div>
+          <div class="form-group">
+            <label for="example-description">Category</label>
+                <select class="form-control" id="category">
+                  <option>Science</option>
+                  <option>Mathematics</option>
+                  <option>Art</option>
+                  <option>Reading</option>
+                  <option>History</option>
+                  <option>Break Time!</option>
+                </select>
+              </div>
+          
+          <div class="form-group">
+            <label for="example-description">Link</label>
+            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Link!"></textarea>
+          </div>
+          <button id="submit" class="btn btn-warning float-right">Submit</button>
+        </form>
+        <br>
+        <br>
+      </div>
+      </div>
+    </div>
+  
 </div>
+
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+
+
+
