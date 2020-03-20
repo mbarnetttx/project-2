@@ -23,11 +23,14 @@ module.exports = function(app) {
 
   app.get("/science", function(req, res) {
     db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("secience", {
+      res.render("science", {
+        title: "Science Time!",
+        msg: "Science for elementry aged children!",
         example: dbExample
       });
     });
   });
+  
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
