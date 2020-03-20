@@ -5,8 +5,8 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.render("index", {
-        title: "Indoor Learning",
-        msg: "A place to help homeschooling parents or summer time with kids!",
+        Toptitle: "Indoor Learning",
+        msg: "A community to help homeschooling parents, summer time with kids, and each other!",
         examples: dbExamples
       });
     });
@@ -22,12 +22,15 @@ module.exports = function(app) {
   });
 
   app.get("/science", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("secience", {
+    db.Example.findAll({}).then(function(dbExample) {
+      res.render("science", {
+        Toptitle: "Science Time!",
+        msg: "Science for elementry aged children!",
         example: dbExample
       });
     });
   });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
