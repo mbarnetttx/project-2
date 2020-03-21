@@ -3,11 +3,11 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+    db.Learn.findAll({}).then(function(dbLearn) {
       res.render("index", {
         title: "Indoor Learning",
         msg: "A place to help homeschooling parents or summer time with kids!",
-        examples: dbExamples
+        //examples: dbLearn
       });
     });
   });
@@ -22,9 +22,9 @@ module.exports = function(app) {
   });
 
   app.get("/science", function(req, res) {
-    db.Example.findAll({}).then(function(dbExample) {
+    db.Learn.findAll({}).then(function(dbLearn) {
       res.render("science", {
-        example: dbExample
+        example: dbLearn
       });
     });
   });
