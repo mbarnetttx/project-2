@@ -5,9 +5,12 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.Learn.findAll({}).then(function(dbLearn) {
       res.render("index", {
+
         title: "Indoor Learning",
         msg: "A place to help homeschooling parents or summer time with kids!",
         //examples: dbLearn
+
+
       });
     });
   });
@@ -22,12 +25,16 @@ module.exports = function(app) {
   });
 
   app.get("/science", function(req, res) {
+
     db.Learn.findAll({}).then(function(dbLearn) {
       res.render("science", {
         example: dbLearn
+
+   
       });
     });
   });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
