@@ -1,33 +1,94 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+    <br>
+    <div class="row">
+      <!-- end of buttons row -->
+      <br>
+  
+      <hr>
+      <!-- featured -->
+      <div class="card-deck">
+        <div class="card">
+          <img src="https://www.goodfreephotos.com/albums/people/kid-yawning-while-sitting.jpg" class="card-img-top"
+            alt="bored child">
+          <div class="card-body">
+            <h5 class="card-title">13 things to keep kids entertained if quarantined for coronavirus</h5>
+            <p class="card-text"> What does one do to occupy a high-energy child when you're not allowed to
+              leave the house? Here's a list of 13 ways to keep kids entertained in the event of a quarantine—and
+              it's not just unlimited screen time. <a
+                href="https://www.usatoday.com/story/tech/reviewedcom/2020/03/12/how-keep-kids-entertained-during-coronavirus-quarantine/5012810002/">Click
+                Here to Find out!</a></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://p1.pxfuel.com/preview/81/311/708/person-human-child-girl.jpg" class="card-img-top"
+            alt="relaxed">
+          <div class="card-body">
+            <h5 class="card-title">Keeping Kids Stress Free!</h5>
+            <p class="card-text">Like adults, kids also struggle with stress. Too many commitments, conflict in their 
+              families and problems with peers are all stressors that overwhelm children. <a
+                href="https://psychcentral.com/lib/7-tips-for-helping-your-child-manage-stress/">Click
+                Here to read more!</a></p> </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://www.littlematrix.com/wp-content/uploads/2015/09/fun_outdoor_kids_activities.jpg"
+            class="card-img-top" alt="outdoors">
+          <div class="card-body">
+            <h5 class="card-title">5 Awesome Outdoor Activities To Keep The Kids Out Of The House</h5>
+            <p class="card-text">Did the kids paint the cat blue again? Time to get them out of the house 
+          – and save your sanity – with these entertaining activities that won’t break the bank! 
+              <a href="https://www.littlematrix.com/five-awesome-outdoor-activities-for-kids/"> Check it Out!</a></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div><!-- end of featured -->
+  
+      <br><br>
+      <hr>
+      <!-- TIPS -->
+      <div class="row">
+        <div class="card mb-3">
+          <img src="https://www.publicdomainpictures.net/pictures/210000/velka/kids-text.jpg" class="card-img-top"
+            alt="kid w/ parents">
+          <div class="card-body">
+            <h5 class="card-title">TIP #1: Keep your children learning without them knowing!</h5>
+            <p class="card-text">Kids tend to not want to learn when you hand them so many worksheets. Make it fun!
+              Trick them in learning by going to museums where they can learn about art or history. Let them pay at the
+              store or even bake
+              where it shows them Mathematics!
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">TIP #2: READ!</h5>
+            <p class="card-text">Reading helps your little ones even if you think they do not understand. Wether it's a
+              nighttime ritual or a daytime
+              duty, reading will improve your child's vocabulary. Start off with simple books and show them the pictures
+              as you go through it. And teach
+              your child not only how to read but what is a book!
+            </p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+          <img src="https://blog.edgenuity.com/wp-content/uploads/2015/08/kids-reading-banner.jpg" class="card-img-top"
+            alt="reading">
+        </div>
+      </div>
+  
+  
+  
+  
+    </div><!-- end of container -->
+  

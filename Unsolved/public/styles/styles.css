@@ -1,3 +1,62 @@
-.list-group-item {
-  line-height: 2.5;
+
+body{
+  background-image: url("https://3.bp.blogspot.com/-sL4_HKhpazc/WpV3QqPdoJI/AAAAAAAAiX8/b_MdwNLY5tsjNj8j4yePg0lBjSKXQ7ZxQCLcBGAs/s1600/sprinkles-phone-wallpaper.jpg");
+  font-family: 'Darker Grotesque', sans-serif;
+  cursor: url("cursor.png"), pointer;
 }
+
+.jumbotron{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 300px;
+}
+
+#mainTitle{
+  font-family: 'Barrio', cursive;
+  font-size: 7rem;
+  color: rgb(255, 217, 0);
+  text-shadow:
+  -3px -3px 0 #000,
+  3px -3px 0 #000,
+  -3px 3px 0 #000,
+  3px 3px 0 #000;
+}
+
+.button {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 5px;
+  margin-right: 3px;
+  margin-left: 0px;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.fixed-bottom {
+  height: 50px;
+  line-height: 15px;
+}
+.quotes{
+  text-align: center;
+}
+.carousel {
+  width: 100%;
+}
+ hr {
+  border: 2px dashed  rgb(230, 206, 73);
+  border-radius: 5px;
+  width: 100%
+ }
+ .card{
+  border-radius: 20px;
+ }
+
+ 
+ 
+
+
+/* font-family: 'Sue Ellen Francisco', cursive;
+font-family: 'Barriecito', cursive;
+font-family: 'Barrio', cursive;
+font-family: 'Darker Grotesque', sans-serif; */
+
