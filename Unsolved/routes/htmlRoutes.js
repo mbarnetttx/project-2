@@ -30,11 +30,11 @@ module.exports = function(app) {
       }
       res.render("science", scienceData)
      
-        title: "Science Time!",
-        msg: "Science for elementary aged children.",
+        title: "Science Time!"
+        //msg: "Science for elementary aged children."
       });
     });
-  });
+  //});
 
   app.get("/art", function(req, res) {
 
