@@ -27,11 +27,10 @@ module.exports = function(app) {
   app.get("/science", function(req, res) {
 
     db.Learn.findAll({}).then(function(dbLearn) {
-      res.render("science", {
-        example: dbLearn
-
-   
-      });
+      let scienceData = {
+        science: dbLearn
+      }
+      res.render("science", scienceData);
     });
   });
 
