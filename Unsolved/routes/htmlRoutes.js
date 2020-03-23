@@ -23,7 +23,7 @@ module.exports = function(app) {
 
   app.get("/science", function(req, res) {
 
-    db.Learn.findAll({where: { category: "science" }}).then(function(dbLearn) {
+    db.Learn.findAll({}).then(function(dbLearn) {
       res.render("science", {
         example: dbLearn,
         title: "Science Time!",

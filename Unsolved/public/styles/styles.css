@@ -1,8 +1,10 @@
 
+
 body{
   background-image: url("https://3.bp.blogspot.com/-sL4_HKhpazc/WpV3QqPdoJI/AAAAAAAAiX8/b_MdwNLY5tsjNj8j4yePg0lBjSKXQ7ZxQCLcBGAs/s1600/sprinkles-phone-wallpaper.jpg");
   font-family: 'Darker Grotesque', sans-serif;
-  cursor: url("cursor.png"), pointer;
+  caret-color: red;
+  cursor: url('pencil.svg'), default;
 }
 
 .jumbotron{
