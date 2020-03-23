@@ -1,9 +1,7 @@
 {
   "development": {
     "username": "root",
-
-
-    "password": "Yen96muri",
+    "password": "",
 
     "database": "indoorLearning_db",
 
