@@ -3,8 +3,8 @@ module.exports = function(sequelize, DataTypes) {
     title: DataTypes.STRING,
     category: DataTypes.STRING,
     link: DataTypes.STRING,
-    createdAt: DataTypes.DATE,
-    updatedAt: DataTypes.DATE
+  },{
+    timestamps: false
   });
   return Learn;
 };
