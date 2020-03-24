@@ -12,17 +12,24 @@ module.exports = function(app) {
   });
 
   app.get("/science", function(req, res) {
-    db.Learn.findAll({}).then(function(dbLearn) {
-      
+    db.Learn.findAll({
+      where: {
+        category: "science"
+      }
+    }).then(function(dbLearn) {
       res.render("science", {
         science: dbLearn,
         title: "Science Time!",
-        msg: "Science for elementary aged children.",
+        msg: "Science for elementary aged children."
       });
     });
   });
   app.get("/art", function(req, res) {
-    db.Learn.findAll({}).then(function(dbLearn) {
+    db.Learn.findAll({
+      where: {
+        category: "art"
+      }
+    }).then(function(dbLearn) {
       res.render("art", {
         art: dbLearn,
         title: "Art Time!",
@@ -31,7 +38,11 @@ module.exports = function(app) {
     });
   });
   app.get("/mathematics", function(req, res) {
-    db.Learn.findAll({}).then(function(dbLearn) {
+    db.Learn.findAll({
+      where: {
+        category: "math"
+      }
+    }).then(function(dbLearn) {
       res.render("math", {
         math: dbLearn,
         title: "Math Time!",
@@ -41,9 +52,13 @@ module.exports = function(app) {
   });
 
   app.get("/read", function(req, res) {
-    db.Learn.findAll({}).then(function(dbLearn) {
+    db.Learn.findAll({
+      where: {
+        category: "reading"
+      }
+    }).then(function(dbLearn) {
       res.render("reading", {
-        read: dbLearn,
+        reading: dbLearn,
         title: "Reading Time!",
         msg: "Reading for elementary aged children."
       });
@@ -51,7 +66,11 @@ module.exports = function(app) {
   });
 
   app.get("/history", function(req, res) {
-    db.Learn.findAll({}).then(function(dbLearn) {
+    db.Learn.findAll({
+      where: {
+        category: "history"
+      }
+    }).then(function(dbLearn) {
       res.render("history", {
         history: dbLearn,
         title: "History Time!",
@@ -61,7 +80,11 @@ module.exports = function(app) {
   });
 
   app.get("/break", function(req, res) {
-    db.Learn.findAll({}).then(function(dbLearn) {
+    db.Learn.findAll({
+      where: {
+        category: "break"
+      }
+    }).then(function(dbLearn) {
       res.render("break", {
         break: dbLearn,
         title: "Break Time!",
