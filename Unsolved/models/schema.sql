@@ -3,7 +3,7 @@ CREATE DATABASE indoorLearning_db;
 
 USE indoorLearning_db;
 
-CREATE TABLE links(
+CREATE TABLE learns(
     id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(100),
     category VARCHAR(20),
