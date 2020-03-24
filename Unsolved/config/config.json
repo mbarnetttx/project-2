@@ -1,17 +1,14 @@
 {
   "development": {
     "username": "root",
-
-    "password": "Yen96muri",
-
-    "database": "indoorLearning_db",
-
+    "password": "password",
+    "database": "indoorlearning_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "password",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
