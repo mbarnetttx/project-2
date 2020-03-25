@@ -1,8 +1,10 @@
+
 // Get references to page elements
-var title = $("#title");
-var description = $("#description");
+var $title = $("#title");
+var $category = $("#category");
 var $submitBtn = $("#submit");
 var $list = $("#list");
+var $link = $("#link")
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveScience: function(science) {
@@ -59,34 +61,25 @@ var handleFormSubmit = function(event) {
 
   var science = {
     title: $title.val().trim(),
-    description: $description.val().trim()
+    category: $category.val().trim(),
+    link: $link.val().trim()
   };
 
-  if (!(science.title && science.description)) {
-    alert("You must enter a title and description!");
+  if (!(science.title && science.category)) {
+    alert("You must enter a title and category!");
     return;
   }
 
-  API.saveExample(science).then(function() {
-    refreshExamples();
+  API.saveScience(science).then(function() {
+    refreshScience();
   });
 
   $title.val("");
-  $description.val("");
+  $link.val("");
 };
 
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
-  var idToDelete = $(this)
-    .parent()
-    .attr("data-id");
 
-  API.deleteExample(idToDelete).then(function() {
-    refreshExamples();
-  });
-};
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+
