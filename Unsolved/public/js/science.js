@@ -1,3 +1,4 @@
+
 // // Get references to page elements
 // var title = $("#title");
 // var description = $("#description");
