@@ -1,18 +1,19 @@
 <div class="container">
 
 <div class="row"><!-- card for database info -->
-  <div class="col-md-4">
+  {{#each reading}}
+
+    <div class="col-md-4 box">
+      
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-
-     {{#each reading}}
           <h5 class="card-title">{{this.title}}</h5>
-          <a href="example/" class="card-link">{{this.link}}</a>
-      {{/each}}
-
+          <a href={{this.link}} class="card-link">Click here to read!</a>
         </div>
       </div>
 
+    </div>
+    {{/each}}
   </div>
 </div><!-- end of card -->
 

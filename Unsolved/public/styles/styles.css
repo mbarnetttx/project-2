@@ -25,13 +25,14 @@ body{
 }
 
 .button {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
-  line-height: 5px;
-  margin-right: 3px;
-  margin-left: 0px;
-  padding: 20px;
+  line-height: 7px;
+  margin-right: 10px;
+  margin-left: 20px;
+  padding: 30px;
   border-radius: 30px;
+  font-family: 'Sue Ellen Francisco', cursive;
 }
 
 .fixed-bottom {
@@ -51,8 +52,17 @@ body{
  }
  .card{
   border-radius: 20px;
+  text-align: center;
  }
 
+ .card-title{
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 40px;
+  background: -webkit-linear-gradient(rgb(238, 216, 19), rgb(237, 0, 245));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 60px;
+ }
  
  
 
