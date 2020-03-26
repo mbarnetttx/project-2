@@ -1,10 +1,10 @@
 
-
+ 
 body{
   background-image: url("https://3.bp.blogspot.com/-sL4_HKhpazc/WpV3QqPdoJI/AAAAAAAAiX8/b_MdwNLY5tsjNj8j4yePg0lBjSKXQ7ZxQCLcBGAs/s1600/sprinkles-phone-wallpaper.jpg");
   font-family: 'Darker Grotesque', sans-serif;
   font-size: 20px;
-  color: rgb(74, 42, 160)
+  color: rgb(74, 42, 160);
 }
 
 .jumbotron{
@@ -62,9 +62,8 @@ body{
   background: -webkit-linear-gradient(rgb(238, 216, 19), rgb(237, 0, 245));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 60px;
+  line-height: 70px;
   text-align: center;
- 
  }
 
  .fact{
@@ -98,8 +97,12 @@ body{
 .card-img-top{
   border-radius: 20px;
 }
+
+a:hover, body{
+  cursor: url("pencil3.png"), default;
+}
+
 /* font-family: 'Sue Ellen Francisco', cursive;
 font-family: 'Barriecito', cursive;
 font-family: 'Barrio', cursive;
 font-family: 'Darker Grotesque', sans-serif; */
-
