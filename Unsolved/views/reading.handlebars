@@ -1,5 +1,15 @@
 <div class="container">
 
+<div class="card card-body text-white"><!-- photo-->
+  <img src="https://c4.wallpaperflare.com/wallpaper/839/50/541/library-cartoon-books-candles-wallpaper-preview.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title factTitle">READING FACT!</h5>
+    <p class="card-text fact">When children have a home library, as few as 20 books of their own at home (think: one bookshelf full), 
+      they achieve three more years of schooling than children who don’t have any books at home.</p>
+  </div>
+</div><!-- end of photo-->
+<br><br>
+
 <div class="row"><!-- card for database info -->
   {{#each reading}}
 
@@ -23,7 +33,7 @@
   <!-- form -->
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>Add a link to contribute to our community!</h1>
+        <h1 class="card-title">Add a link to contribute to our community!</h1>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Title</label>
