@@ -67,19 +67,6 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/science", function(req, res) {
-    db.Learn.findAll({}).then(function(dbLearn) {
-      res.json(dbLearn);
-    });
-  });
-
-  // Create a new example
-  app.post("/api/science", function(req, res) {
-    db.Learn.create(req.body).then(function(dbLearn) {
-      res.json(dbLearn);
-    });
-  });
-
   app.get("/api/break", function(req, res) {
     db.Learn.findAll({}).then(function(dbLearn) {
       res.json(dbLearn);

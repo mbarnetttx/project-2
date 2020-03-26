@@ -1,25 +1,33 @@
 
 // Get references to page elements
 var $title = $("#title");
-var $category = $("#category");
 var $submitBtn = $("#submit");
+var $category = $("#category");
 var $list = $("#list");
 var $link = $("#link")
+var $cats = $("#category")
+
+category = $("#category")
+
+
+
+
+
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveScience: function(science) {
+  saveForm: function(category) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/science",
-      data: JSON.stringify(science)
+      url: `api/${str}`,
+      data: JSON.stringify(category)
     });
   },
   getScience: function(category) {
     return $.ajax({
-      url: "api/" + category,
+      url: `api/${category}`,
       type: "GET"
     });
   },
@@ -34,15 +42,15 @@ var API = {
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshScience = function() {
   API.getScience().then(function(data) {
-    var $science = data.map(function(science) {
+    var $science = data.map(function(category) {
       var $a = $("<a>")
-        .text(science.text)
-        .attr("href", "/science/" + science.id);
+        .text(category.text)
+        .attr("href", "/science/" + category.id);
 
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
-          "data-id": science.id
+          "data-id": category.id
         })
         .append($a);
 
@@ -50,7 +58,7 @@ var refreshScience = function() {
     });
 
     $list.empty();
-    $list.append($science);
+    $list.append($cats);
   });
 };
 
@@ -58,19 +66,19 @@ var refreshScience = function() {
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function(event) {
   event.preventDefault();
-
-  var science = {
+  console.log($title.val())
+  var category = {
     title: $title.val().trim(),
     category: $category.val().trim(),
     link: $link.val().trim()
   };
 
-  if (!(science.title && science.category)) {
+  if (!(category.title && category.category)) {
     alert("You must enter a title and category!");
     return;
   }
 
-  API.saveScience(science).then(function() {
+  API.saveForm(category).then(function() {
     refreshScience();
   });
 
