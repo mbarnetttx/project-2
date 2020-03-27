@@ -1,10 +1,8 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
 
     "password": "password1",
->>>>>>> 6b575929c6b3f5905006d4ab3d725b855315a16e
     "database": "indoorlearning_db",
     "host": "localhost",
     "dialect": "mysql"

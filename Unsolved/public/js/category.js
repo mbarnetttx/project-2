@@ -1,56 +1,41 @@
-
 // Get references to page elements
 var $title = $("#title");
 var $category = $("#category");
 var $submitBtn = $("#submit");
 var $list = $("#list");
-var $link = $("#link");
-var likes = 0;
-
+var $link = $("#link")
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveScience: function(science) {
+  saveCategory: function(category) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/science",
-      data: JSON.stringify(science)
+      url: "api/" + category,
+      data: JSON.stringify(category)
     });
   },
-  getScience: function(category) {
+  getCategory: function(category) {
     return $.ajax({
       url: "api/" + category,
       type: "GET"
-    });
-  },
-  deleteScience: function(id) {
-    return $.ajax({
-      url: "api/science/" + id,
-      type: "DELETE"
-    });
-  },
-  editLikes: function(id) {
-    return $.ajax({
-      url: "api/science/" + id,
-      type: "DELETE"
     });
   }
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
-var refreshScience = function() {
-  API.getScience().then(function(data) {
-    var $science = data.map(function(science) {
+var refreshCategory = function() {
+  API.getCategory().then(function(data) {
+    var $category = data.map(function(category) {
       var $a = $("<a>")
-        .text(science.text)
-        .attr("href", "/science/" + science.id);
+        .text(category.text)
+        .attr("href", "/" + category + "/" + category.id);
 
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
-          "data-id": science.id
+          "data-id": category.id
         })
         .append($a);
 
@@ -58,7 +43,7 @@ var refreshScience = function() {
     });
 
     $list.empty();
-    $list.append($science);
+    $list.append($category);
   });
 };
 
@@ -67,19 +52,19 @@ var refreshScience = function() {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-  var science = {
+  var category = {
     title: $title.val().trim(),
     category: $category.val().trim(),
     link: $link.val().trim()
   };
-
-  if (!(science.title && science.category)) {
+  
+  if (!(category.title && category.category)) {
     alert("You must enter a title and category!");
     return;
   }
 
-  API.saveScience(science).then(function() {
-    refreshScience();
+  API.saveCategory(category).then(function() {
+    refreshCategory();
   });
 
   $title.val("");
@@ -88,11 +73,5 @@ var handleFormSubmit = function(event) {
 
 
 
-// Add event listeners to the submit 
+// Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-
-$("#button").on("click", function(event) {
-  event.preventDefault();
-  likes++;
-  // write code for incrementing likes by 1
-});

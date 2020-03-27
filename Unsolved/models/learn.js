@@ -3,7 +3,7 @@ module.exports = function (sequelize, DataTypes) {
     title: DataTypes.STRING,
     category: DataTypes.STRING,
     link: DataTypes.STRING,
-
+    likes: DataTypes.INTEGER
   },{
 
     timestamps: false
