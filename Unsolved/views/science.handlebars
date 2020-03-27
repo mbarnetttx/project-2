@@ -20,7 +20,8 @@
         <div class="card-body">
           <h5 class="card-title">{{this.title}}</h5>
           <a href={{this.link}} class="card-link">Click here to read!</a>
-          <button id="likes">Like</button>
+          <button class="likes">Like</button>
+          <p id="showlikes">{{this.likes}}</p>
         </div>
       </div>
 
@@ -50,11 +51,11 @@
             <label for="category">Category</label>
             <select class="form-control" id="category">
               <option>Science</option>
-              <option>Mathematics</option>
+              <option>Math</option>
               <option>Art</option>
               <option>Reading</option>
               <option>History</option>
-              <option>Break Time!</option>
+              <option>Break</option>
             </select>
           </div>
 

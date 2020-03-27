@@ -31,10 +31,10 @@ var API = {
       type: "DELETE"
     });
   },
-  editLikes: function(id) {
+  editLikes: function(likes) {
     return $.ajax({
-      url: "api/science/" + id,
-      type: "DELETE"
+      url: "api/science/:postid" + likes,
+      type: "POST"
     });
   }
 };
@@ -78,12 +78,12 @@ var handleFormSubmit = function(event) {
     return;
   }
 
-  API.saveScience(science).then(function() {
-    refreshScience();
-  });
+  API.saveScience(science);
 
   $title.val("");
   $link.val("");
+
+  location.reload();
 };
 
 
@@ -91,8 +91,10 @@ var handleFormSubmit = function(event) {
 // Add event listeners to the submit 
 $submitBtn.on("click", handleFormSubmit);
 
-$("#button").on("click", function(event) {
+$(".likes").on("click", function(event) {
   event.preventDefault();
   likes++;
+  API.editLikes(likes);
+  console.log("button clicked " + likes);
   // write code for incrementing likes by 1
 });
