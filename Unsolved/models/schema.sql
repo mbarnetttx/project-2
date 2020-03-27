@@ -8,6 +8,7 @@ CREATE TABLE learns(
     title VARCHAR(100),
     category VARCHAR(20),
     link VARCHAR(240),
+    likes INT,
     primary key(id)
 );
 
