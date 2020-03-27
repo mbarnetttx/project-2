@@ -1,56 +1,57 @@
-
 // Get references to page elements
 var $title = $("#title");
-var $submitBtn = $("#submit");
 var $category = $("#category");
+var $submitBtn = $("#submit");
 var $list = $("#list");
-var $link = $("#link")
-var $cats = $("#category")
+var $link = $("#link");
 
-category = $("#category")
-
-
-
+category = $("#category");
 
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveForm: function(category) {
+  saveScience: function(science) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: `api/${str}`,
-      data: JSON.stringify(category)
+      url: "api/" + category,
+      data: JSON.stringify(science)
     });
   },
-  getScience: function(category) {
+  getScience: function() {
     return $.ajax({
-      url: `api/${category}`,
+      url: "api/" + category,
       type: "GET"
     });
   },
-  deleteScience: function(id) {
-    return $.ajax({
-      url: "api/science/" + id,
-      type: "DELETE"
-    });
-  }
+  // deleteScience: function(id) {
+  //   return $.ajax({
+  //     url: "api" + category + id,
+  //     type: "DELETE"
+  //   });
+  // },
+  // editLikes: function(id) {
+  //   return $.ajax({
+  //     url: "api/science/" + id,
+  //     type: "DELETE"
+  //   });
+  // }
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshScience = function() {
   API.getScience().then(function(data) {
-    var $science = data.map(function(category) {
+    var $science = data.map(function(science) {
       var $a = $("<a>")
-        .text(category.text)
-        .attr("href", "/science/" + category.id);
+        .text(science.text)
+        .attr("href", "/" + category + "/" + science.id);
 
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
-          "data-id": category.id
+          "data-id": science.id
         })
         .append($a);
 
@@ -58,7 +59,7 @@ var refreshScience = function() {
     });
 
     $list.empty();
-    $list.append($cats);
+    $list.append($science);
   });
 };
 
@@ -66,19 +67,19 @@ var refreshScience = function() {
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function(event) {
   event.preventDefault();
-  console.log($title.val())
-  var category = {
+
+  var science = {
     title: $title.val().trim(),
     category: $category.val().trim(),
     link: $link.val().trim()
   };
 
-  if (!(category.title && category.category)) {
+  if (!(science.title && science.category)) {
     alert("You must enter a title and category!");
     return;
   }
 
-  API.saveForm(category).then(function() {
+  API.saveScience(science).then(function() {
     refreshScience();
   });
 
@@ -88,6 +89,5 @@ var handleFormSubmit = function(event) {
 
 
 
-// Add event listeners to the submit and delete buttons
+// Add event listeners to the submit 
 $submitBtn.on("click", handleFormSubmit);
-
