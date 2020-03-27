@@ -1,18 +1,29 @@
 <div class="container">
 
+<div class="card card-body text-white"><!-- photo-->
+  <img src="https://c4.wallpaperflare.com/wallpaper/380/388/842/field-grass-kids-run-wallpaper-preview.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title factTitle">BREAK TIME FACT!</h5>
+    <p class="card-text fact">Longer breaks—such as recess or playtime—provide opportunities for children to learn important life skills. 
+      Research shows that when children play together, they learn how to take turns, resolve conflicts, and solve problems.</p>
+  </div>
+</div><!-- end of photo-->
+<br><br>
+
 <div class="row"><!-- card for database info -->
-  <div class="col-md-4">
+  {{#each break}}
+
+    <div class="col-md-4 box">
+      
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-
-     {{#each break}}
           <h5 class="card-title">{{this.title}}</h5>
-          <a href="example/" class="card-link">{{this.link}}</a>
-      {{/each}}
-
+          <a href={{this.link}} class="card-link">Click here to read!</a>
         </div>
       </div>
 
+    </div>
+    {{/each}}
   </div>
 </div><!-- end of card -->
 
@@ -22,7 +33,7 @@
   <!-- form -->
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>Add a link to contribute to our community!</h1>
+        <h1 class="card-title">Add a link to contribute to our community!</h1>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Title</label>

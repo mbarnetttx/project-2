@@ -1,19 +1,29 @@
 <div class="container">
 
+<div class="card card-body text-white"><!-- photo-->
+  <img src="https://c4.wallpaperflare.com/wallpaper/662/963/756/artwork-night-stars-sailing-ship-wallpaper-preview.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title factTitle">HISTORY FACT!</h5>
+    <p class="card-text fact">Plays in Shakespeare’s time were different to the ones we have today. There were no female actors 
+      (women’s parts were played by men!), and audiences could be very rowdy. </p>
+  </div>
+</div><!-- end of photo-->
+<br><br>  
+
 <div class="row"><!-- card for database info -->
-  <div class="col-md-4">
+  {{#each history}}
+
+    <div class="col-md-4 box">
+      
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-
-     {{#each history}}
           <h5 class="card-title">{{this.title}}</h5>
-          <a href="example/" class="card-link">{{this.link}}</a>
-      {{/each}}
-
+          <a href={{this.link}} class="card-link">Click here to read!</a>
         </div>
       </div>
 
-  </div>
+    </div>
+    {{/each}}
 </div><!-- end of card -->
 
 <br>
@@ -22,7 +32,7 @@
   <!-- form -->
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>Add a link to contribute to our community!</h1>
+        <h1 class="card-title">Add a link to contribute to our community!</h1>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Title</label>

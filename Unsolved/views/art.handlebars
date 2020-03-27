@@ -1,19 +1,32 @@
 <div class="container">
 
-<div class="row"><!-- card for database info -->
-  <div class="col-md-4">
+<div class="card card-body text-white"><!-- photo-->
+  <img src="https://c4.wallpaperflare.com/wallpaper/513/429/173/pencil-hd-wallpaper-preview.jpg" class="card-img" alt="artFact">
+  <div class="card-img-overlay">
+    <h5 class="card-title factTitle">ART FACT!</h5>
+    <p class="card-text fact">Did you know that kids learn a lot more than self-expression by doing art?  When kids are encouraged to get their ideas onto paper by expressing themselves through art,
+       they learn skills towards letting their creativity and confidence soar.
+    </p>
+  </div>
+</div><!-- end of photo-->
+<br><br>
+
+ 
+<div class="row"> <!-- card for database info -->
+    {{#each art}}
+
+    <div class="col-md-4 box">
+      
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-
-     {{#each art}}
           <h5 class="card-title">{{this.title}}</h5>
-          <a href="example/" class="card-link">{{this.link}}</a>
-      {{/each}}
-
+          <a href={{this.link}} class="card-link">Click here to read!</a>
         </div>
       </div>
 
-  </div>
+    </div>
+    {{/each}}
+
 </div><!-- end of card -->
 
 <br>
@@ -22,7 +35,7 @@
   <!-- form -->
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>Add a link to contribute to our community!</h1>
+        <h1 class="card-title">Add a link to contribute to our community!</h1>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Title</label>

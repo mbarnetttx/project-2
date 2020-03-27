@@ -1,19 +1,29 @@
 <div class="container">
 
+ <div class="card card-body text-white"><!-- photo-->
+  <img src="https://c0.wallpaperflare.com/preview/263/921/102/business-communication-computer-concept.jpg" class="card-img" alt="...">
+  <div class="card-img-overlay">
+    <h5 class="card-title factTitle">MATH FACT!</h5>
+    <p class="card-text fact">Fleas can jump around 130times their own height. So if a flea were a person six feet high,
+       it can jump 780 feet high just like that. No superpowers needed!</p>
+  </div>
+</div><!-- end of photo-->
+<br><br> 
+
 <div class="row"><!-- card for database info -->
-  <div class="col-md-4">
+  {{#each math}}
+
+    <div class="col-md-4 box">
+      
       <div class="card" style="width: 18rem;">
         <div class="card-body">
-
-     {{#each math}}
           <h5 class="card-title">{{this.title}}</h5>
-          <a href="example/" class="card-link">{{this.link}}</a>
-      {{/each}}
-
+          <a href={{this.link}} class="card-link">Click here to read!</a>
         </div>
       </div>
 
-  </div>
+    </div>
+    {{/each}}
 </div><!-- end of card -->
 
 <br>
@@ -22,7 +32,7 @@
   <!-- form -->
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>Add a link to contribute to our community!</h1>
+        <h1 class="card-title">Add a link to contribute to our community!</h1>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="title">Title</label>
