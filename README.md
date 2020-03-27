@@ -21,9 +21,10 @@ An app that allows homeschooling parents, summertime with kids, and to help each
   <li>Bootstrap</li>
   <li>Node JS </li>
   <li>Mysql Workbench </li>
+  <li>animate.css (new technology)</li>
 </ul>
 
-  #TEAM
+# TEAM
 <ul>
   <li>Jennifer Moundanos</li>
   <li>Meredith Barnett</li>
