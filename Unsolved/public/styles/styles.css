@@ -69,7 +69,6 @@ body{
  .fact{
    font-size: 40px;
    text-align: left;
-   font-weight: 50px;
    color: rgb(255, 244, 253);
    margin-left:50px;
    margin-right:50px;
@@ -102,7 +101,100 @@ a:hover, body{
   cursor: url("pencil3.png"), default;
 }
 
-/* font-family: 'Sue Ellen Francisco', cursive;
-font-family: 'Barriecito', cursive;
-font-family: 'Barrio', cursive;
-font-family: 'Darker Grotesque', sans-serif; */
+/*media query */
+@media screen and (max-width: 1200px) {
+  .button{
+    font-size: 50px;
+    line-height: 30px;
+    margin-right: 15px;
+    margin-left: 0px;
+    padding: 20px;
+  }
+  .card-title{
+    font-size: 35px;
+    line-height: 50px;
+  }
+}
+@media screen and (max-width: 990px) {
+    .button{
+      font-size: 40px;
+      line-height: 30px;
+      margin-right: 5px;
+      margin-left: 0px;
+      padding: 15px;
+    }
+    .card-title{
+      font-size: 30px;
+      line-height: 40px;
+    }
+    body{
+    font-size: 15px;
+    }
+    .fact{
+      font-size: 30px;
+    }
+
+    .factTitle{
+      font-size: 50px;
+      line-height: 10px;
+    }
+    .col-md-4{
+      margin-right: 100px;
+      margin-bottom: 20px
+    }
+}
+
+@media screen and (max-width: 768px){
+  .button{
+    font-size: 30px;
+    line-height: 30px;
+    margin-right: 5px;
+    margin-left: 0px;
+    padding: 10px;
+  }
+  .card-title{
+    font-size: 25px;
+    line-height: 30px;
+  }
+  body{
+   font-size: 15px;
+  }
+  .fact{
+    font-size: 20px;
+  }
+  
+  .factTitle{
+    font-size: 40px;
+    line-height: 10px;
+  }
+  .col-md-4{
+    margin-left: 15%; 
+  }
+  
+}
+
+@media screen and (max-width: 640px){
+  .button{
+    font-size: 150%;
+    line-height: 30px;
+    margin-right: 5px;
+    margin-left: 0px;
+    padding: 15px;
+  }
+  .card-title{
+    font-size: 30px;
+    line-height: 40px;
+  }
+  body{
+   font-size: 15px;
+  }
+  .fact{
+    font-size: 20px;
+  }
+  
+  .factTitle{
+    font-size: 50px;
+    line-height: 10px;
+  }
+ 
+}
