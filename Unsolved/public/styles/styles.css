@@ -97,8 +97,15 @@ body{
   border-radius: 20px;
 }
 
-a:hover, body{
-  cursor: url("pencil3.png"), default;
+a:hover, body, button:hover{
+  cursor: url("pencil3.png"), none;
+}
+
+.likes{
+  background-color: rgb(255, 251, 0);
+  border-radius: 100px;
+  line-height: 10px;
+  padding: 0px;
 }
 
 /*media query */
