@@ -27,7 +27,7 @@ module.exports = function(app) {
   app.get("/art", function(req, res) {
     db.Learn.findAll({
       where: {
-        category: "art"
+        category: "Art"
       }
     }).then(function(dbLearn) {
       res.render("art", {
