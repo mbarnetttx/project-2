@@ -24,18 +24,6 @@ var API = {
       url: "api/" + category,
       type: "GET"
     });
-  },
-  deleteScience: function(id) {
-    return $.ajax({
-      url: "api/science/" + id,
-      type: "DELETE"
-    });
-  },
-  editLikes: function(likes) {
-    return $.ajax({
-      url: "api/science/:postid" + likes,
-      type: "POST"
-    });
   }
 };
 
@@ -86,15 +74,10 @@ var handleFormSubmit = function(event) {
   location.reload();
 };
 
-
-
 // Add event listeners to the submit 
 $submitBtn.on("click", handleFormSubmit);
 
 $(".likes").on("click", function(event) {
-  event.preventDefault();
-  likes++;
-  API.editLikes(likes);
-  console.log("button clicked " + likes);
+
   // write code for incrementing likes by 1
 });
