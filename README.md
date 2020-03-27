@@ -9,7 +9,7 @@ An app that allows homeschooling parents, summertime with kids, and to help each
 # Demo
 <a href="">Click here for a live demo.</a>
 
-![view-items](ReadMe images/project2.png)
+![Home-page](https://github.com/mbarnetttx/project-2/blob/master/ReadMe%20images/project2.png)
 
 # Built with
 <ul>
