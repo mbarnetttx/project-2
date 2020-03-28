@@ -114,6 +114,7 @@ a:hover, body, button:hover{
   color: rgb(245, 222, 13)
 }
 
+
 /*media query */
 @media screen and (max-width: 1200px) {
   .button{
