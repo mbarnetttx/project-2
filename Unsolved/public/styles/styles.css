@@ -103,6 +103,7 @@ a:hover, body, button:hover{
 }
 
 .likes{
+  background-color: none;
   border: none;
   font-size: 30px;
   color: rgb(255, 0, 234);
