@@ -16,10 +16,13 @@
 
     <div class="col-md-4 box">
       
-      <div class="card" style="width: 18rem;">
+      <div class="card"style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">{{this.title}}</h5>
           <a href={{this.link}} class="card-link">Click here to read!</a>
+         <p id="showlikes">
+          <button class="likes"><i class="fa fa-smile-o"></i></button>
+          {{this.likes}}</p>
         </div>
       </div>
 
@@ -49,11 +52,11 @@
             <label for="category">Category</label>
             <select class="form-control" id="category">
               <option>Science</option>
-              <option>Mathematics</option>
+              <option>Math</option>
               <option>Art</option>
               <option>Reading</option>
               <option>History</option>
-              <option>Break Time!</option>
+              <option>Break</option>
             </select>
           </div>
 
@@ -63,7 +66,7 @@
               placeholder="Enter Link!"></textarea>
           </div>
 
-
+          <br>
           <div class="field">
             <button id="submit" class="btn btn-warning float-right">Submit</button>
           </div>
@@ -81,4 +84,3 @@
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/science.js"></script>
-<script src="../public/js/index.js"></script>

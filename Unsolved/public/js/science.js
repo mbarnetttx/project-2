@@ -4,9 +4,13 @@ var $category = $("#category");
 var $submitBtn = $("#submit");
 var $list = $("#list");
 var $link = $("#link");
+<<<<<<< HEAD
 
 category = $("#category");
 
+=======
+var likes = 0;
+>>>>>>> 11baed67e41fbe6e3155af28c8dc19472d87022c
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -25,6 +29,7 @@ var API = {
       url: "api/" + category,
       type: "GET"
     });
+<<<<<<< HEAD
   },
   // deleteScience: function(id) {
   //   return $.ajax({
@@ -38,6 +43,9 @@ var API = {
   //     type: "DELETE"
   //   });
   // }
+=======
+  }
+>>>>>>> 11baed67e41fbe6e3155af28c8dc19472d87022c
 };
 
 // refreshExamples gets new examples from the db and repopulates the list
@@ -79,15 +87,18 @@ var handleFormSubmit = function(event) {
     return;
   }
 
-  API.saveScience(science).then(function() {
-    refreshScience();
-  });
+  API.saveScience(science);
 
   $title.val("");
   $link.val("");
+
+  location.reload();
 };
-
-
 
 // Add event listeners to the submit 
 $submitBtn.on("click", handleFormSubmit);
+
+$(".likes").on("click", function(event) {
+
+  // write code for incrementing likes by 1
+});
