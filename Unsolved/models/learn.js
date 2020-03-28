@@ -4,7 +4,7 @@ module.exports = function (sequelize, DataTypes) {
     category: DataTypes.STRING,
     link: DataTypes.STRING,
     likes: DataTypes.INTEGER
-  },{
+  }, {
 
     timestamps: false
   });
