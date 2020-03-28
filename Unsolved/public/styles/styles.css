@@ -53,7 +53,7 @@ body{
  .card{
   border-radius: 20px;
   text-align: center;
-  
+  margin-bottom: 20px;
  }
 
  .card-title{
@@ -91,14 +91,26 @@ body{
   box-shadow: 5px 10px 18px #888888;
   border-color: none;
   border-radius: 20px;
+  
 }
 
 .card-img-top{
   border-radius: 20px;
 }
 
-a:hover, body{
-  cursor: url("pencil3.png"), default;
+a:hover, body, button:hover{
+  cursor: url("pencil3.png"), none;
+}
+
+.likes{
+  border: none;
+  font-size: 30px;
+  color: rgb(255, 0, 234);
+  line-height: 2px;
+}
+
+.likes:hover{
+  color: rgb(245, 222, 13)
 }
 
 /*media query */

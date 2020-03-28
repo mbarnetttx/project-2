@@ -20,8 +20,11 @@
         <div class="card-body list-card-body">
           <h5 class="card-title">{{this.title}}</h5>
           <a href={{this.link}} class="card-link">Click here to read!</a>
+
           <button class="likes" data-likes={{this.likes}} data-id={{this.id}}>Like</button>
           <span id="showLikes">Likes: {{this.likes}} </span>
+
+        
         </div>
       </div>
 
@@ -65,7 +68,7 @@
               placeholder="Enter Link!"></textarea>
           </div>
 
-
+          <br>
           <div class="field">
             <button id="submit" class="btn btn-warning float-right">Submit</button>
           </div>
