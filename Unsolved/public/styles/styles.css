@@ -102,10 +102,14 @@ a:hover, body, button:hover{
 }
 
 .likes{
-  background-color: rgb(255, 251, 0);
-  border-radius: 100px;
-  line-height: 10px;
-  padding: 0px;
+  border: none;
+  font-size: 30px;
+  color: rgb(255, 0, 234);
+  line-height: 2px;
+}
+
+.likes:hover{
+  color: rgb(245, 222, 13)
 }
 
 /*media query */
