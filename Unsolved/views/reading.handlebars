@@ -19,9 +19,12 @@
         <div class="card-body">
           <h5 class="card-title">{{this.title}}</h5>
           <a href={{this.link}} class="card-link">Click here to read!</a>
-           <p id="showlikes">
-          <button class="likes"><i class="fa fa-smile-o"></i></button>
-          {{this.likes}}</p>
+
+          <span id="showLikes">
+          <button class="likes" data-likes={{this.likes}} data-id={{this.id}}><i class="fa fa-smile-o"></i></button>
+           {{this.likes}} </span>
+
+         
         </div>
         </div>
       

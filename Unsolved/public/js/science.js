@@ -5,11 +5,10 @@ var $category = $("#category");
 var $submitBtn = $("#submit");
 var $list = $("#list");
 var $link = $("#link");
-var likes = 0;
 
-// The API object contains methods for each kind of request we'll make
+
 var API = {
-  saveScience: function(science) {
+  saveScience: function (science) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
@@ -19,40 +18,28 @@ var API = {
       data: JSON.stringify(science)
     });
   },
-  getScience: function(category) {
+  getScience: function (category) {
     return $.ajax({
       url: "api/" + category,
       type: "GET"
+    }).then(function(data) {
+      console.log(data);
+      refreshScience(data);
     });
-  }
+  },
+  updateLikes: function (id, likes) {
+    return $.ajax({
+      url: "api/update-likes/" + id + "/" + likes,
+      type: "PUT"
+    }).then(data => {
+    location.reload();
+  })
+}
 };
+let currentPage = location.pathname.split("/")[1];
+console.log(currentPage);
 
-// refreshExamples gets new examples from the db and repopulates the list
-var refreshScience = function() {
-  API.getScience().then(function(data) {
-    var $science = data.map(function(science) {
-      var $a = $("<a>")
-        .text(science.text)
-        .attr("href", "/science/" + science.id);
-
-      var $li = $("<li>")
-        .attr({
-          class: "list-group-item",
-          "data-id": science.id
-        })
-        .append($a);
-
-      return $li;
-    });
-
-    $list.empty();
-    $list.append($science);
-  });
-};
-
-// handleFormSubmit is called whenever we submit a new example
-// Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
+var handleFormSubmit = function (event) {
   event.preventDefault();
 
   var science = {
@@ -74,10 +61,15 @@ var handleFormSubmit = function(event) {
   location.reload();
 };
 
-// Add event listeners to the submit 
 $submitBtn.on("click", handleFormSubmit);
 
-$(".likes").on("click", function(event) {
+$(document).on("click", ".likes", function (event) {
+  event.preventDefault();
+  var likes = $(this).attr("data-likes");
+  var id = $(this).attr("data-id");
 
-  // write code for incrementing likes by 1
+  updatedLikes = parseInt(likes) + 1;
+
+  API.updateLikes(id, updatedLikes);
+
 });
