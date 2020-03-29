@@ -23,8 +23,8 @@ var API = {
       url: "api/" + category,
       type: "GET"
     }).then(function(data) {
-      console.log(data);
-      refreshScience(data);
+      //console.log(data);
+      //refreshScience(data);
     });
   },
   updateLikes: function (id, likes) {
