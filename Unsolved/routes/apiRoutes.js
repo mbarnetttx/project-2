@@ -7,8 +7,6 @@ module.exports = function(app) {
       res.json(dbLearn);
     });
   });
-
-  
   app.post("/api/science", function(req, res) {
     let title = req.body.title
     let category = req.body.category
@@ -16,7 +14,7 @@ module.exports = function(app) {
     let likes = req.body.likes
     db.Learn.create({title, category, link, likes
     }).then(function(dbLearn) {
-      console.log(req);
+      //console.log(req);
       res.json(dbLearn);
     });
   });

@@ -1,5 +1,4 @@
 
-// Get references to page elements
 var $title = $("#title");
 var $category = $("#category");
 var $submitBtn = $("#submit");
@@ -23,8 +22,7 @@ var API = {
       url: "api/" + category,
       type: "GET"
     }).then(function(data) {
-      console.log(data);
-      refreshScience(data);
+      //console.log(data);
     });
   },
   updateLikes: function (id, likes) {
