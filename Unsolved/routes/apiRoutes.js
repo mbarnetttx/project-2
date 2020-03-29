@@ -7,8 +7,6 @@ module.exports = function(app) {
       res.json(dbLearn);
     });
   });
-
-  
   app.post("/api/science", function(req, res) {
     let title = req.body.title
     let category = req.body.category
