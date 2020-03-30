@@ -43,7 +43,8 @@ var handleFormSubmit = function (event) {
   var science = {
     title: $title.val().trim(),
     category: $category.val().trim(),
-    link: $link.val().trim()
+    link: $link.val().trim(),
+    likes: 0
   };
 
   if (!(science.title && science.category)) {
