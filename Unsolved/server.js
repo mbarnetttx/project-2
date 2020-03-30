@@ -18,7 +18,7 @@ if (process.env.JAWSDB_URL) {
     database: 'indoorLearning_db'
   })
 }
-connection.connect();
+
 
 var app = express();
 var PORT = process.env.PORT || 3000;
