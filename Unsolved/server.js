@@ -1,8 +1,24 @@
-// require("dotenv").config();
+require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
 
 var db = require("./models");
+
+var connection;
+if (process.env.JAWSDB_URL) {
+  // Database is JawsDB on Heroku
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  // Database is local
+  connection = mysql.createConnection({
+    port: 3306,
+    host: 'localhost',
+    user: 'root',
+    password: 'password1',
+    database: 'indoorLearning_db'
+  })
+}
+connection.connect();
 
 var app = express();
 var PORT = process.env.PORT || 3000;
