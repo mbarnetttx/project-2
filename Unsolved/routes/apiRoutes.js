@@ -11,7 +11,7 @@ module.exports = function(app) {
     let title = req.body.title
     let category = req.body.category
     let link = req.body.link
-    let likes = 0
+    let likes = req.body.likes
     db.Learn.create({title, category, link, likes
     }).then(function(dbLearn) {
       //console.log(req);
