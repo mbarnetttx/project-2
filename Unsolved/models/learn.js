@@ -6,10 +6,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       unique: true
     },
-    likes: {
-      type: DataTypes.INTEGER,
-      defaultValue: 0
-    }
+    likes: DataTypes.INTEGER
   }, {
 
     timestamps: false

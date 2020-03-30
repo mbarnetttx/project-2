@@ -8,10 +8,10 @@ module.exports = function(app) {
     });
   });
   app.post("/api/science", function(req, res) {
-    let title = req.body.title
-    let category = req.body.category
-    let link = req.body.link
-    let likes = req.body.likes
+    let title = req.body.title;
+    let category = req.body.category;
+    let link = req.body.link;
+    let likes = req.body.likes;
     db.Learn.create({title, category, link, likes
     }).then(function(dbLearn) {
       //console.log(req);
