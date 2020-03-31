@@ -1,10 +1,8 @@
-
 var $title = $("#title");
 var $category = $("#category");
 var $submitBtn = $("#submit");
 var $list = $("#list");
 var $link = $("#link");
-
 
 var API = {
   saveScience: function (science) {
@@ -43,7 +41,7 @@ var handleFormSubmit = function (event) {
   var science = {
     title: $title.val().trim(),
     category: $category.val().trim(),
-    link: $link.val().trim()
+    link: $link.val().trim(),
   };
 
   if (!(science.title && science.category)) {
@@ -71,3 +69,4 @@ $(document).on("click", ".likes", function (event) {
   API.updateLikes(id, updatedLikes);
 
 });
+
