@@ -8,7 +8,6 @@ module.exports = function (sequelize, DataTypes) {
     },
     likes: DataTypes.INTEGER
   }, {
-
     timestamps: false
   });
   return Learn;

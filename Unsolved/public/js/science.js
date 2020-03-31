@@ -1,10 +1,8 @@
-
 var $title = $("#title");
 var $category = $("#category");
 var $submitBtn = $("#submit");
 var $list = $("#list");
 var $link = $("#link");
-
 
 var API = {
   saveScience: function (science) {
@@ -71,3 +69,4 @@ $(document).on("click", ".likes", function (event) {
   API.updateLikes(id, updatedLikes);
 
 });
+
