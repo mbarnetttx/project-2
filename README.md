@@ -1,6 +1,4 @@
 
-# Project-2
-Second project UT Bootcap.
 
 # Indoor Learning
 
